@@ -13,7 +13,7 @@ public class ChallengeServiceImpl implements ChallengeService{
         User user = new User(null, attemptDTO.getUserAlias());
         // Builds the domain object. Null ID for now.
         ChallengeAttempt checkedAttempt = new ChallengeAttempt(null,
-                user.getId(),
+                user,
                 attemptDTO.getFactorA(),
                 attemptDTO.getFactorB(),
                 attemptDTO.getGuess(),

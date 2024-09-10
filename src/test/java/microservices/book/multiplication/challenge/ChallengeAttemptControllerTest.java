@@ -43,7 +43,7 @@ public class ChallengeAttemptControllerTest {
         long attemptId = 5L;
 
         ChallengeAttemptDTO attemptDTO = new ChallengeAttemptDTO(50, 70, "john", 3500);
-        ChallengeAttempt expectedResponse = new ChallengeAttempt(attemptId, user.getId(),
+        ChallengeAttempt expectedResponse = new ChallengeAttempt(attemptId, user,
                 50, 70, 3500, true);
         given(challengeService.verifyAttempt(eq(attemptDTO))).willReturn(expectedResponse);
         // when
